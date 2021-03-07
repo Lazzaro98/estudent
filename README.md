@@ -26,7 +26,7 @@ Types of users:
 - Can see the Contact tab with a list of professors and their contact details
 - Can see News, posts, students' competitions, jobs, and internship news
 
-![Screenshot](screenshots/predmeti_list.png)
+![Screenshot](screenshots/subjects_page.png)
 
 ### Registered User
 
@@ -49,7 +49,7 @@ Types of users:
 - Can open a list for lab/exam/homework on which students can upload their works
 - Can upload materials for the subjects that they teach (pdf books, exam results, etc.) which are available to the students
 
-![Screenshot](screenshots/subjects_page.png)
+![Screenshot](screenshots/predmeti_list.png)
 
 #### Admin
 - Can see the list of all users, add new user, delete user, edit user
