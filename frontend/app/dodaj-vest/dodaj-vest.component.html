@@ -1,0 +1,64 @@
+<div class="right_side">
+    <p>Овде можете додати вест. </p>
+
+    <div class="login">
+        <form name="o-predmetu-edit">
+            <table>
+                <tr>
+                    <td>
+                        Наслов:
+                    </td>
+                    <td>
+                        <input class="oble_ivice_register" type="text" required="true" name = "naslov" [(ngModel)]='naslov'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Предмети:
+                    </td>
+                    <td>
+                        <span *ngFor = "let predmet of mojiPredmeti; let i = index;">
+                            <label><input type="checkbox" (click)='regulisi(i)'>{{predmet.naziv}}</label> &nbsp;
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Текст вести:
+                    </td>
+                    <td>
+                        <textarea class="uslov_i_cilj" required="true" name="vest" [(ngModel)]='vest'></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Датум:
+                    </td>
+                    <td>
+                        <input type="date"
+       value="2018-07-22" class="oble_ivice_register" required="true" name="date" [(ngModel)]='date'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Фајл:
+                    </td>
+                    <td>
+                        <input type="file" style="display: none" #file (change)="fileChange($event)"/>
+                        <button type="file" class="upload_btn" style="margin-bottom: 10px;" (click)="file.click()">Додај фајлови</button>
+                        <span>{{filename}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <button class = "submit_btn" (click)='dodajVest()'>Сачувај измене</button>
+                    </td>
+                    <td style="text-align:center" *ngIf="updated">
+                        <span style="font-size:0.8em; color:green">Измене успешно сачуване.</span>
+                    </td>
+                    
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>

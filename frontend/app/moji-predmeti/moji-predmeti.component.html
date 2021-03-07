@@ -1,0 +1,9 @@
+<div class = 'right_side'>
+    <div class="page_title" style="font-size: 2.5em;">Моји предмети</div>
+    <hr>
+    <div class="border_dashed" *ngFor = "let predmet of mojiPredmeti">
+        <div class="predmet" (click)='preusmeri("../predmet/"+predmet.informacije[0].sifra)'>
+            <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}]</span></a>
+        </div>
+    </div>
+</div>

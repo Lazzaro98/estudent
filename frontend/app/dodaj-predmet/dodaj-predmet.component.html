@@ -1,0 +1,79 @@
+<div class="right_side">
+    <p>Овде можете подесити основне информације о предмету. </p>
+
+    <div class="login">
+        <form name="o-predmetu-edit">
+            <table>
+                <tr>
+                    <td>
+                        Назив:
+                    </td>
+                    <td>
+                        <input class="oble_ivice_register" type="text" required="true" name = "sifra" [(ngModel)]='naziv'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Шифра:
+                    </td>
+                    <td>
+                        <input class="oble_ivice_register" type="text" required="true" name = "sifra" [(ngModel)]='sifra'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ЕСПБ:
+                    </td>
+                    <td>
+                        <input class = "oble_ivice_register" type="text" required="true" name="espb" [(ngModel)]='espb'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Статус:
+                    </td>
+                    <td>
+                        <select class = "oble_ivice_register_select" required="true" name = "tip" [(ngModel)]="tip">
+                            <option value="obavezan">обавезан</option>
+                       
+                            <option value="neobavezni"> необавезан</option>
+                          
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Услов:
+                    </td>
+                    <td>
+                        <textarea class="uslov_i_cilj" required="true" name="uslov" [(ngModel)]="uslov"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Циљ:
+                    </td>
+                    <td>
+                        <textarea class="uslov_i_cilj" required="true" name="cilj" [(ngModel)]="cilj"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Семестар:
+                    </td>
+                    <td>
+                        <input class = "oble_ivice_register" type="text" required="true" name="espb" [(ngModel)]='semestar'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <button class = "submit_btn" (click)="updateDB()">Сачувај измене</button>
+                    </td>
+                    <td style="text-align:center" *ngIf="updated">
+                        <span style="font-size:0.8em; color:green">Измене успешно сачуване.</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+
+<div class='right_side'>
+<div class="login">
+    <form name="o-predmetu-edit">
+        <table>
+            <tr>
+                <td>
+                    Стара лозинка:
+                </td>
+                <td>
+                    <input class="oble_ivice_register" type="text" required="true" name = "username" [(ngModel)]='staraSifra'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Нова лозинка:
+                </td>
+                <td>
+                    <input class = "oble_ivice_register" type="text" required="true" name="name" [(ngModel)]='novaLozinka'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Поновите нову лозинку:
+                </td>
+                <td>
+                    <input class = "oble_ivice_register" type="text" required="true" name="surname" [(ngModel)]='ponovljenaLozinka'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <button class = "submit_btn" (click)="promeniLozinku()">Сачувај измене</button>
+                </td>
+                <td style="text-align:center" *ngIf="greska">
+                    <span style="font-size:0.8em; color:red">Унесите исправну шифру.</span>
+                </td> 
+            </tr>
+        </table>
+    </form>
+</div>
+</div>

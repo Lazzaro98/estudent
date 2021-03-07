@@ -1,0 +1,15 @@
+
+<div class="right_side">
+    <div class="page_title border_dashed">
+        <a style="color:black;">{{ 'projekti.naslov' | translate }}</a>
+    </div>
+    
+    <div class="obavestenje" *ngFor = "let projekat of sviProjekti">
+        <div class="obavestenje_naslov">
+            {{projekat.naslov}}
+            <div class="obavestenje_datum">{{projekat.date}}</div>
+        </div>
+        <div class="obavestenje_tekst">{{projekat.tekst}}</div>
+       <!-- <a href="#" download>download.zip&#8595;</a>-->
+        <hr>
+    </div>

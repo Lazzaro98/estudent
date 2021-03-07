@@ -1,0 +1,15 @@
+
+<div class="right_side">
+    <div class="page_title border_dashed">
+        <a style="color:black;">Почетна</a>
+    </div>
+    
+    <div class="obavestenje" *ngFor = "let vest of vesti">
+        <div class="obavestenje_naslov">
+            {{vest.naslov}}
+            <div class="obavestenje_datum">{{vest.datum}}</div>
+        </div>
+        <div class="obavestenje_tekst">{{vest.tekst}}</div>
+       <!-- <a href="#" download>download.zip&#8595;</a>-->
+        <hr>
+    </div>

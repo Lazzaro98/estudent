@@ -1,0 +1,52 @@
+<app-top></app-top>
+
+
+
+<div class="left_side">
+    <div class="etf_logo" id="etf_l"></div>
+    
+    <hr>
+    <ul class="side_bar">
+        <li><a  (click)='preusmeri("login")'>{{ 'neregmenu.pocetna' | translate }}</a></li>
+        <hr>
+        <li><a (click)='preusmeri("zaposleni")'>{{ 'neregmenu.zaposleni' | translate }}</a></li>
+        <hr>
+        <li>
+            <a (click)='preusmeri("sva-obavestenja")'>{{ 'obavestenja.obavestenja' | translate }}</a>
+            <ul class="sub_list">
+                <li><a (click)='preusmeri("studentska-takmicenja")'>{{ 'obavestenja.studentskaTakmicenja' | translate }}</a></li>
+                <li><a (click)='preusmeri("konferencije")'>{{ 'obavestenja.konferencije' | translate }}</a></li>
+                <li><a (click)='preusmeri("praksa")'>{{ 'obavestenja.praksa' | translate }}</a></li>
+                <li><a (click)='preusmeri("posao")'>{{ 'obavestenja.posao' | translate }}</a></li>
+            </ul>
+        </li>
+        <hr>
+        <li>
+            <a>{{ 'neregmenu.osnovne-studije' | translate }}</a>
+            <ul class="sub_list">
+                <li><a (click)='preusmeri("lista-predmeta-ir")'>{{ 'predmeti.padajuciIR' | translate }}</a></li>
+                <li><a (click)='preusmeri("lista-predmeta-si")'>{{ 'predmeti.padajuciSI' | translate }}</a></li>
+                <li><a (click)='preusmeri("lista-predmeta-ostali")'>{{ 'predmeti.padajuciOS' | translate }}</a></li>
+            </ul>
+        </li>
+        <hr>
+        <li><a (click)='preusmeri("master")'>{{ 'neregmenu.master studije' | translate }}</a></li>
+        <hr>
+        <li><a (click)='preusmeri("projekti")'>{{ 'neregmenu.projekti' | translate }}</a></li>
+        <hr>
+        <li>
+            <a>{{ 'neregmenu.nauka' | translate }}</a>
+            <ul class="sub_list">
+                <li><a (click)='preusmeri("istrazivanja")'>{{ 'istrazivanja.istrazivanja' | translate }}</a></li>
+                <li><a (click)='preusmeri("naucni-projekti")'>{{ 'istrazivanja.projekti' | translate }}</a></li>
+            </ul>
+        </li>
+        <hr>
+        <li><a (click)='preusmeri("kontakt")'>{{ 'kontakt.kontakt' | translate }}</a></li>
+        <hr>
+        
+    </ul>
+    
+</div>
+
+<router-outlet></router-outlet>

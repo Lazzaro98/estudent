@@ -1,0 +1,45 @@
+<div class="right_side">
+    <div class="info">
+        <div class="login">
+            <h1>{{ 'login.naslov' | translate }}</h1>
+            <form name="prijava">
+                <table>
+                    <tr>
+                        <td>
+                            {{ 'login.username' | translate }}:
+                        </td>
+                        <td>
+                            <input class="oble_ivice" type="text" required="true" name = "username" [(ngModel)]='username'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'login.password' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice" type="password" required="true" name="password" [(ngModel)]='password'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <button class = "submit_btn" (click)='login()'>{{ 'login.login' | translate }}</button>
+                        </td>
+                        <td style="text-align:right">
+                            <a style="font-size:0.8em;" (click)='preusmeri("../register")'>{{ 'login.register' | translate }}</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <span *ngIf='greskaPriLogovanju' style="color:red">
+            {{ 'login.greska' | translate }}        </span>
+        <br>
+        <hr>
+        
+        <h1>{{ 'informacije.okatedri' | translate }}</h1>
+        
+        <p>{{ 'informacije.adresa' | translate }}</p>
+        
+        <div class="slide_show" id="slide_show"></div>
+    </div>
+  </div>

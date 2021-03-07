@@ -1,0 +1,56 @@
+<app-top>
+</app-top>
+
+
+<div class="left_side" id='left_side'>
+    <div class="etf_logo" id="etf_l"></div>
+    <span style="margin-left: 150px; font-size:x-large; font-style: italic;" class='imena'>{{username}}</span>
+    <hr>
+    <ul class="side_bar">
+        <li><a (click)='odi("dashboard-student/pocetna")'>Почетна</a></li>
+        <hr>
+        <li><a  (click)='preusmeri("moji-predmeti")'>Моји предмети</a></li>
+        <hr>
+        <li><a (click)='preusmeri("zaposleni")'>Запослени</a></li>
+        <hr>
+        <li>
+            <a (click)='preusmeri("sva-obavestenja")'>Обавештења</a>
+            <ul class="sub_list">
+                <li><a (click)='preusmeri("studentska-takmicenja")'>Позиви за студентска такмичења</a></li>
+                <li><a (click)='preusmeri("konferencije")'>Обавештења о конференцијама</a></li>
+                <li><a (click)='preusmeri("praksa")'>Понуде за праксу</a></li>
+                <li><a (click)='preusmeri("posao")'>Понуде за посао</a></li>
+            </ul>
+        </li>
+        <hr>
+        <li>
+            <a>Основне студије</a>
+            <ul class="sub_list">
+                <li><a (click)='preusmeri("lista-predmeta-ir")'>Одсек за Рачунарску технику и информатику</a></li>
+                <li><a (click)='preusmeri("lista-predmeta-si")'>Одсек за Софтверско инжењерство</a></li>
+                <li><a (click)='preusmeri("lista-predmeta-ostali")'>Остали одсеци</a></li>
+            </ul>
+        </li>
+        <hr>
+        <li><a (click)='preusmeri("master")'>Мастер студије </a></li>
+        <hr>
+        <li><a (click)='preusmeri("projekti")'>Пројекти</a></li>
+        <hr>
+        <li>
+            <a>Наука</a>
+            <ul class="sub_list">
+                <li><a (click)='preusmeri("istrazivanja")'>Истраживања</a></li>
+                <li><a (click)='preusmeri("naucni-projekti")'>Пројекти</a></li>
+            </ul>
+        </li>
+        <hr>
+        <li><a (click)='preusmeri("kontakt")'>Контакт</a></li>
+        <hr>
+        <li><a (click)='odjava()'>Одјава</a></li>
+        <hr>
+        
+    </ul>
+    
+</div>
+
+<router-outlet></router-outlet>

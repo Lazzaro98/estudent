@@ -1,0 +1,62 @@
+<div class="right_side">
+    <div class="page_title" style="font-size: 2.5em;">{{ 'predmeti.naslovIR' | translate }}</div>
+    <hr>
+    <div class="page_title border_dashed">
+        {{ 'predmeti.treci' | translate }}
+    </div>
+    <div *ngFor = "let predmet of irPredmeti">
+    <div class="predmet" *ngIf = "predmet.semestar == 3">
+        <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}]</span></a>
+    </div>
+    </div>
+
+
+    <div class="page_title border_dashed">
+        {{ 'predmeti.cetvrti' | translate }}
+    </div>
+    <div *ngFor = "let predmet of irPredmeti">
+    <div class="predmet" *ngIf = "predmet.semestar == 4">
+        <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}]</span></a>
+    </div>
+    </div>
+
+
+    <div class="page_title border_dashed">
+        {{ 'predmeti.peti' | translate }}
+    </div>
+    <div *ngFor = "let predmet of irPredmeti">
+    <div class="predmet" *ngIf = "predmet.semestar == 5">
+        <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}]</span></a>
+    </div>
+    </div>
+
+
+    <div class="page_title border_dashed">
+        {{ 'predmeti.sesti' | translate }}
+    </div>
+    <div *ngFor = "let predmet of irPredmeti">
+    <div class="predmet" *ngIf = "predmet.semestar == 6">
+        <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}]</span></a>
+    </div>
+    </div>
+
+
+    <div class="page_title border_dashed">
+        {{ 'predmeti.sedmi' | translate }}
+    </div>
+    <div *ngFor = "let predmet of irPredmeti">
+    <div class="predmet" *ngIf = "predmet.semestar == 7">
+        <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}]</span></a>
+    </div>
+    </div>
+
+
+    <div class="page_title border_dashed">
+        {{ 'predmeti.osmi' | translate }}
+    </div>
+    <div *ngFor = "let predmet of irPredmeti">
+    <div class="predmet" *ngIf = "predmet.semestar == 8">
+        <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}]</span></a>
+    </div>
+    </div>
+</div>

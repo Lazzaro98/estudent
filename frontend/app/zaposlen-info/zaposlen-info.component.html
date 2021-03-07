@@ -1,0 +1,30 @@
+<div class="right_side">
+
+    <img src='{{image}}' class="zaposleni_slika">
+    <div class="zaposlen-info" style="float: left; margin-left:10px;">
+        <div class="zaposleni_ime">{{ime}} {{prezime}}</div>
+        <div class="zaposleni_zvanje">{{zvanje}}</div>
+        <div class="zaposleni_zvanje">Kabinet: {{classnum}}</div>
+        <div class="zaposleni_zvanje">{{number}}</div>
+        <div class="zaposleni_zvanje" style="font-weight: bold;">{{website}}</div>
+        <div class="zaposleni_zvanje" style="font-weight: bold;">{{mail}}</div>
+    </div>
+    <br>
+    <div style="width:100%;position: relative;float: left;margin-top: 10px;">
+    {{bio}}
+    
+    
+</div>
+
+<br>
+<br>
+<br>
+<br><br><br><br>
+<div *ngFor = "let predmet of mojiPredmeti">
+    <div class="predmet">
+        <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}]</span></a>
+    </div>
+        
+    </div>
+
+</div>

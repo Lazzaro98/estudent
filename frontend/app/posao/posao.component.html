@@ -1,0 +1,15 @@
+<div class="right_side">
+    <div class="page_title border_dashed">
+        <a style="color:black;" (click)='preusmeri("../sva-obavestenja")'>Обавештења</a>
+        <span class="page_subtitle"> > Обавештења о пословима</span>
+    </div>
+    
+    <div class="obavestenje" *ngFor = "let obavestenje of poslovi">
+        <div class="obavestenje_naslov">
+            {{obavestenje.naslov}}
+            <div class="obavestenje_datum">{{obavestenje.date}}</div>
+        </div>
+        <div class="obavestenje_tekst">{{obavestenje.tekst}}</div>
+       <!-- <a href="#" download>download.zip&#8595;</a>-->
+        <hr>
+    </div>

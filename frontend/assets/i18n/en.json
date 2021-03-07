@@ -1,0 +1,97 @@
+{
+    "neregmenu": {
+        "naslov":"Department for Computer Science and Informatics",
+        "pocetna": "Home",
+        "zaposleni": "Hired",
+        "obavestenja": "Information",
+        "osnovne-studije":"Bachelors studies",
+        "master studije":"Master Studies",
+        "projekti": "Projects",
+        "nauka": "Science",
+        "kontakt": "Contact"
+    },
+
+    "login":{
+        "username":"Username",
+        "password":"Password",
+        "login":"Log in",
+        "register":"Create new account",
+        "greska":"Wrong credentials. Try again.",
+        "naslov":"Login"
+    },
+
+    "registracija":{
+        "addz":"Add account for hired",
+        "regz":"Register as hired",
+        "username":"Username",
+        "password":"Password",
+        "name":"Name",
+        "surname":"Surname",
+        "address":"Address",
+        "number":"Number",
+        "website":"Website",
+        "info": "Personal info",
+        "title":"title",
+        "classnum":"Class number",
+        "status":"Status",
+        "reg":"Register",
+        "dodaj":"Add",
+
+        "adds":"Add student",
+        "regs":"Register as a student",
+        "indeks":"Index",
+        "tip":"Type of studies",
+        "osnovne":"Bachelor studies",
+        "master":"Master studies",
+        "doktor":"PhD studies"
+    },
+
+    "informacije":{
+        "okatedri":"About department",
+        "adresa":"Elektrotehnički fakultet, Univerzitet u Beogradu, Bulevar kralja Aleksandra 73, 11120 Beograd, Srbija."
+    },
+
+    "zaposleni":{
+        "zaposleni":"Hired"
+    },
+
+    "obavestenja":{
+        "obavestenja":"News",
+        "studentskaTakmicenja":"Calls for students' competitions",
+        "konferencije":"Conferences news",
+        "praksa":"Interships",
+        "posao": "Jobs"
+    },
+
+    "predmeti":{
+        "padajuciIR":"Department for Computer Science and Informatics", 
+        "padajuciSI":"Department for Software Engineering",        
+        "padajuciOS":"Other departments",               
+        "naslovIR":"Subjects on the department for Computer Science and Infromatics",
+        "naslovSI":"Subjects on Department for Software Engineering",
+        "naslovOS":"Subjects on other departments",
+        "naslovmaster":"Subjects on master studies",
+        "prvi":"1. Semester",
+        "drugi":"2. Semester",
+        "treci":"3. Semester",
+        "cetvrti":"4. Semester",
+        "peti":"5. Semester",
+        "sesti":"6. Semester",
+        "sedmi":"7. Semester",
+        "osmi":"8. Semester"
+    },
+
+    "projekti":{
+        "naslov":"Projects"
+    },
+
+    "istrazivanja":{
+        "istrazivanja":"Researches",
+        "projekti":"Projects"
+    },
+
+    "kontakt":{
+        "kontakt":"Contact"
+    }
+
+}

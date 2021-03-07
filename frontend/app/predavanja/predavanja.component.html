@@ -1,0 +1,46 @@
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th{
+        background-color:#3076b8;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #a7d1f8;
+    }
+</style>
+
+
+
+<div class="right_side">
+
+
+
+
+    <input type="file" style="display: none" #file (change)="fileChange($event)"/>
+    <button type="file" class="submit_btn" style="margin-bottom: 10px;" (click)="file.click()">Додај материјале</button>
+    <table (click)="sortData($event)">
+        <tr>
+          <th  (click)='sortByDokument()'>Документ</th>
+          <th  (click)='sortByVelicina()'>Величина</th>
+          <th  (click)='sortByDate()'>Датум</th>
+          <th  (click)='sortByAutor()'>Аутор</th>
+          <th></th>
+        </tr>
+        <tr *ngFor = "let predavanje of predavanja">
+          <td><a href = "assets/predavanja/{{predavanje.dokument}}">{{predavanje.dokument}}</a></td>
+          <td>{{predavanje.velicina}}</td>
+          <td>{{predavanje.date}}</td>
+          <td>{{predavanje.autor}}</td>
+          <td><button class="remove_btn" (click)='ukloni(predavanje)'>Уклони</button></td>
+        </tr>
+    </table>
+</div>

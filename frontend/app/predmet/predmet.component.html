@@ -1,0 +1,38 @@
+<div class='right_side'>
+    <div class="page_title; border_dashed" style="font-size: 2.5em;" >
+        {{naziv}}
+        <span class='sifra_predmeta2'>[{{sifra}}]</span>
+    </div>
+
+    <div *ngFor = "let spisk of spiskovi">
+        <div class="jedanspisak">
+            <div class="imespiska">{{spisk.imeSpiska}}</div>
+            <div style="color:green" *ngIf = 'spisk.status==1' class="status"> 
+               
+                <div *ngIf = 'spisk.status==1 && !imaMeNaSpisku(spisk.spisak)'style="display:inline;">
+                    <button class = "add_btn" (click)='dodajMe(spiskovi,spisk)'>Додај ме</button>
+                </div>
+                <div *ngIf = 'spisk.status==1 && imaMeNaSpisku(spisk.spisak)'style="display:inline;">
+                    <button class = "remove_btn" (click)='ukloniMe(spiskovi,spisk)'>Уклони ме</button>
+                </div>
+            </div>
+            
+            <div style="color:red" *ngIf = 'spisk.status==0' class="status"> Пријаве затворене</div>
+                <div class="korisnici">Пријављени корисници:</div>
+                <div class="imena" *ngFor = 'let spisakImena of spisk.spisak'>
+                    <span *ngIf="spisakImena.username==user.username" style="font-weight: bold;"> - {{spisakImena.username}}</span>
+                    <span *ngIf="spisakImena.username!=user.username"> - {{spisakImena.username}}</span>
+                </div>
+                
+                <div *ngIf = "user"></div>
+                <div *ngIf = 'imaMeNaSpisku(spisk.spisak)'style="display:inline;">
+                    <input type="file" style="display: none" #file (change)="fileChange(spiskovi,spisk,$event)"/>
+                    <button type="file" class = "add_btn" (click)='file.click()'>Предај рад</button>
+                </div>
+                <span *ngFor = 'let spisakImena of spisk.spisak' style="margin-left: 3px;">
+                  <span *ngIf="spisakImena.username==user.username" style="font-style: normal; font-size:small;">{{spisakImena.domaci}}</span>  
+                </span> 
+                </div>
+    </div>
+    
+</div>

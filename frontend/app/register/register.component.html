@@ -1,0 +1,217 @@
+<div class="right_side">
+    <div class="info">
+        <div class="login">
+            <form name="reg_zap" class="reg_zap" >
+                <table>
+                    <tr>
+                        <td colspan="2" *ngIf='!logged'><h1>{{ 'registracija.regz' | translate }}</h1></td>
+                        <td colspan="2" *ngIf='logged'><h1>{{ 'registracija.addz' | translate }}</h1></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'login.username' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" required="true" name="usernameZ" [(ngModel)]="usernameZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'login.password' | translate }}:
+                            :
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="password" required="true" name="passwordZ" [(ngModel)]="passwordZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.name' | translate }}:
+                            
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" required="true" name="nameZ" [(ngModel)]="nameZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.surname' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" required="true" name="surnameZ" [(ngModel)]="surnameZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.address' | translate }}:
+                            
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" required="true" name="mailZ" [(ngModel)]="mailZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.number' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" name="numberZ" [(ngModel)]="numberZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.website' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" name="websiteZ" [(ngModel)]="websiteZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.info' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" name="bioZ" [(ngModel)] = "bioZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.title' | translate }}:
+                            
+                        </td>
+                        <td >
+                            <select class = "oble_ivice_register_select" name="status" id="status" required="true" name="zvanjeZ" [(ngModel)]='zvanjeZ'>
+                                <optgroup class = "oble_ivice_register" label="Наставни">
+                                <option class = "oble_ivice_register" value="red_prof">редовни професор</option>
+                                <option class = "oble_ivice_register" value="van_prof">ванредни професор</option>
+                                <option class = "oble_ivice_register" value="docent">доцент</option>
+                                <option class = "oble_ivice_register" value="asistent">асистент</option>
+                                <option class = "oble_ivice_register" value="saradnik">сарадник у настави</option>
+                                <optgroup class = "oble_ivice_register" label="Ненаставни">
+                                <option class = "oble_ivice_register" value="istrazivac">истраживач</option>
+                                <option class = "oble_ivice_register" value="lab_inz">лабораторијски инжењер </option>
+                                <option class = "oble_ivice_register" value="lab_teh">лабораторијски техничар</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.classnum' | translate }}:
+
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" required="true" name="classnumZ" [(ngModel)]="classnumZ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.status' | translate }}:
+                            
+                        </td>
+                        <td>
+                            <select class = "oble_ivice_register_select" name="statusZ" id="status" required="true" [(ngModel)]='statusZ'>
+                                <option value="aktivan">{{ 'registracija.aktivan' | translate }}</option>
+                                <option value="neaktivan">{{ 'registracija.neaktivan' | translate }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngIf='!logged'>
+                            <button class="submit_btn" (click)="registerZ()">{{ 'registracija.regz' | translate }}</button>
+                        </td>
+                        <td *ngIf='logged'>
+                            <button class="submit_btn" (click)="registerZ()">{{ 'registracija.addz' | translate }}</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form name="reg_stud">
+                <table>
+                    <tr>
+                        <td colspan="2" *ngIf='!logged'><h1>{{ 'registracija.regs' | translate }}</h1></td>
+                        <td colspan="2" *ngIf='logged'><h1>{{ 'registracija.adds' | translate }}</h1></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.username' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" required="true" name="usernameS" [(ngModel)]="usernameS">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.password' | translate }}
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="password" required="true" name="passwordS" [(ngModel)]="passwordS">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.indeks' | translate }}
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" placeholder="ГГГГ/ББББ" required="true" name="indeksS" [(ngModel)]="indeksS">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.tip' | translate }}:
+                        </td>
+                        <td>
+                            <select class = "oble_ivice_register_select" name="tip_stud" id="tip_stud" required="true" name="tipStudijaS">
+                                <option value="d">d - {{ 'registracija.osnovne' | translate }}</option>
+                                <option value="m">m - {{ 'registracija.master' | translate }}</option>
+                                <option value="p">p - {{ 'registracija.doktor' | translate }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.name' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" required="true" name="nameS" [(ngModel)]="nameS">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.surname' | translate }}:
+                        </td>
+                        <td>
+                            <input class = "oble_ivice_register" type="text" required="true" name="surnameS" [(ngModel)]="surnameS">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ 'registracija.status' | translate }}:
+                        </td>
+                        <td>
+                            <select class = "oble_ivice_register_select" name="statusS" id="status2" required="true" [(ngModel)]="statusS">
+                                <option value="aktivan">{{ 'registracija.aktivan' | translate }}</option>
+                                <option value="neaktivan">{{ 'registracija.neaktivan' | translate }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngIf='!logged'>
+                            <button class="submit_btn" (click)="registerS()">{{ 'registracija.regs' | translate }}</button>
+                        </td>
+                        <td *ngIf='logged'>
+                            <button class="submit_btn" (click)="registerS()">{{ 'registracija.adds' | translate }}</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <span style="display:table; margin:0 auto; color:green" *ngIf = uspesnoRegistrovan>Успешно сте се регистровали. Прослеђујемо вас на страну за пријаву...</span>
+    <span style="display:table; margin:0 auto; color:red" *ngIf = greskaPriRegistraciji>Грешка при регистрацији.</span>
+    <span style="display:table; margin:0 auto; color:red" *ngIf = neispravanIndeks>Indeks mora biti u formatu dddd/gggg. </span>
+    <span style="display:table; margin:0 auto; color:red" *ngIf = usernameZauzet>Username koji ste ukucali je zauzet. Odaberite neki drugi. </span>
+    <span style="display:table; margin:0 auto; color:red" *ngIf = 'obaveznaPoljaS || obaveznaPoljaZ'>Popunite sva obavezna polja! </span>
+
+
+  </div>
+  

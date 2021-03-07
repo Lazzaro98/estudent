@@ -1,0 +1,8 @@
+<div class='right_side'>
+    <div class="page_title; border_dashed" style="font-size: 2.5em;" >
+        {{naziv}}
+        <span class='sifra_predmeta2'>[{{sifra}}]</span>
+    </div>
+    <a (click) = 'preusmeri("o-predmetu")'>О предмету</a> | <a (click) = 'preusmeri("predavanja")'>Предавања</a> | <a (click)='preusmeri("vezbe")'>Вежбе</a> | <a (click)="preusmeri('ispitna-pitanja')">Испитна питања</a>
+</div>
+<router-outlet></router-outlet>

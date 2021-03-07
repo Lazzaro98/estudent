@@ -1,0 +1,77 @@
+<div class="right_side">
+    <h3>Лабови</h3>
+    <table>
+        <tr>
+          <th  (click)='sortByDokument()'>Документ</th>
+          <th  (click)='sortByVelicina()'>Величина</th>
+          <th  (click)='sortByDate()'>Датум</th>
+          <th  (click)='sortByAutor()'>Аутор</th>
+          <th  (click)='sortByNaslov()'>Наслов</th>
+          <th  (click)='sortByOpis()'>Опис</th>
+          <th  (click)='sortByRok()'>Рок</th>
+          <th></th>
+        </tr>
+        <tr *ngFor = "let predavanje of labovi">
+          <td><a href = "assets/labovi/{{predavanje.dokument}}">{{predavanje.dokument}}</a></td>
+          <td>{{predavanje.velicina}}</td>
+          <td>{{predavanje.date}}</td>
+          <td>{{predavanje.autor}}</td>
+          <td>{{predavanje.naslov}}</td>
+          <td style="font-size: x-small;">{{predavanje.opis}}</td>
+          <td style="color:red">{{predavanje.rok}}</td>
+          <td><button class="remove_btn" (click)='ukloni(predavanje)'>Уклони</button></td>
+
+        </tr>
+    </table>
+    <br>
+    <h3>Додај нови лаб:</h3>
+   
+    <form name="o-predmetu-edit">
+      <div>
+          <div>
+              <div>
+                  Наслов:
+              </div>
+              <div>
+                  <input class="oble_ivice_register" type="text" required="true" name = "sifra" [(ngModel)]='naslovD'>
+              </div>
+            </div>
+          <div>
+              <div>
+                  Рок:
+              </div>
+              <div>
+                  <input class = "oble_ivice_register" type="text" required="true" name="espb" [(ngModel)]='rokD'>
+              </div>
+            </div>
+            <div>
+              <div>
+                <input type="file" style="display: none" #file (change)="fileChange($event)"/>
+                <button type="file" class="submit_btn" style="margin-bottom: 10px;" (click)="file.click()">Додај документ</button>
+              </div>
+              <div>
+                  <span style="color:darkgreen">{{fajlD}}</span>
+              </div>
+            </div>
+          <div>
+              <div>
+                  Опис:
+              </div>
+              <div>
+                  <textarea class="uslov_i_cilj" required="true" name="uslov" [(ngModel)]="opisD"></textarea>
+              </div>
+            </div>
+          
+          <div>
+            <div>
+               <button class = "submit_btn" (click)='dodajNovi()'>Додај лаб</button>
+            </div>
+           <!-- <td style="text-align:center" *ngIf="updated">
+                <span style="font-size:0.8em; color:green">Измене успешно сачуване.</span>
+            </td>-->
+            
+          </div>
+        </div>
+
+</form>
+</div>

@@ -1,0 +1,11 @@
+<div class = 'right_side'>
+    <div class="page_title" style="font-size: 2.5em;">Предмети     <button class = "add_btn" (click)='preusmeri("../dodaj-predmet")'>Додај</button>
+    </div>
+    <hr>
+    <div class="border_dashed" *ngFor = "let predmet of sviPredmeti">
+        <div class="predmet" (click)='preusmeri("../uredi-predmet/"+predmet.informacije[0].sifra+"/o-predmetu")'>
+            <a>{{predmet.naziv}}<span class="sifra_predmeta">[{{predmet.informacije[0].sifra}}] </span></a>
+        </div>
+        <button class='remove_btn' (click)='ukloni(predmet)'>Уклони</button>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="right_side">
+<div>
+    <div class="page_title border_dashed">{{ 'zaposleni.zaposleni' | translate }}</div>
+    <br>
+    <div class="zaposleni_osoba border_dashed" *ngFor="let zaposlen of zaposleni">
+        <div (click) = 'preusmeri("../zaposlen-info/" + zaposlen.username)'>
+        <img src='{{zaposlen.image}}' class="zaposleni_slika">
+        <div class="zaposleni_info">
+            <div class="zaposleni_ime">{{zaposlen.name}}</div>
+            <div class="zaposleni_zvanje">{{zaposlen.zvanje}}</div>
+            <div class="zaposleni_predmeti" *ngFor = 'let predmet of zaposlen.predmeti'>{{predmet.sifra}}</div> <!--dodati kada napravis nastavni plan-->
+        </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+</div>

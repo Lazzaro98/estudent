@@ -1,0 +1,46 @@
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th{
+        background-color:#3076b8;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #a7d1f8;
+    }
+</style>
+
+<div class="right_side">
+    <button type="file" class="submit_btn" style="margin-bottom: 10px;"(click)="preusmeri('../dodaj-korisnika')">Додај</button>
+    <table>
+        <tr>
+            <th mat-sort-header="username">Корисничко име</th>
+            <th mat-sort-header="name">Име</th>
+            <th mat-sort-header="surname">Презиме</th>
+            <th mat-sort-header="type">Тип корисника</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor = "let user of sviUseri">
+          <td>{{user.username}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.surname}}</td>
+          <td *ngIf = 'user.type==0'>Админ</td>
+          <td *ngIf = 'user.type==2'>Студент</td>
+          <td *ngIf = 'user.type==1'>Запослен</td>
+          <td><button class="remove_btn" (click)='ukloni(user.username)'>Уклони</button></td>
+          <td><button class="add_btn" (click)='preusmeri("../uredi-korisnika/" + user.username)'>Уреди</button></td>
+        </tr>
+    </table>
+
+    <button class='add_btn' (click)='ucitaj()'>Ucitaj tabelaStudenata.csv</button>
+    
+</div>

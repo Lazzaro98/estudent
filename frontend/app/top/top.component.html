@@ -1,0 +1,39 @@
+<div class="head_title">
+  <!--<div style = "float:right;vertical-align: top; margin-right: 20px;" *ngIf = 'ulogovan'>-->
+<!--  <span style="font-size: small; display:table;">{{user.username}}</span>-->
+<!--  <a style="font-size: smaller; display:table;  cursor:pointer; position: relative; z-index: 10;" (click)='odjava()'>Одјави ме</a>-->
+ <!-- </div> -->
+ <span class="form-inline" style="position:relative; float:right; z-index: 1;">
+  <select 
+      class="form-control" 
+      #selectedLang 
+      (change)="switchLang(selectedLang.value)">
+    <option *ngFor="let language of translate.getLangs()" 
+      [value]="language"
+      [selected]="language === translate.currentLang" >
+      {{ language }}
+    </option>
+  </select>
+</span>
+<!--<div class="burger" id="burger"></div>
+  <div class="nav-wrapper">
+    <div class="sl-nav">
+      Languages:
+      <ul>
+        <li><b>smth</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+          <div class="triangle"></div>
+          <ul class="form-control" 
+          #selectedLang 
+          (click)="switchLang(selectedLang.value)">
+            <li *ngFor="let language of translate.getLangs()" 
+            [value]="language"
+            (click)="language === translate.currentLang"><i class="sl-flag flag-de"><div id="germany"></div></i> <span class="active">{{language}}</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>-->
+    <div class="head_title_text">
+      {{ 'neregmenu.naslov' | translate }}    </div>
+  
+</div>

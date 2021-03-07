@@ -1,0 +1,15 @@
+<div class= 'right_side'>
+    <div class="page_title border_dashed">{{ 'kontakt.kontakt' | translate }}</div>
+	<br>
+    <div *ngFor="let zaposlen of zaposleni">
+        <div class="zaposleni_osoba">
+            <img src='{{zaposlen.image}}' class="zaposleni_slika">
+		    <div class="zaposleni_info">
+			    <div class="zaposleni_ime">{{zaposlen.name}}</div>
+			    <div class="zaposleni_zvanje">{{zaposlen.zvanje}}</div>
+                <div class="zaposleni_predmeti">{{zaposlen.mail}}</div>
+                <div class="zaposleni_predmeti">{{zaposlen.number}}</div>
+            </div>
+	    </div>
+    </div>
+</div>

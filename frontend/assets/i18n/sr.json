@@ -1,0 +1,97 @@
+{
+    "neregmenu": {
+        "naslov":"Katedra za računarsku tehniku i informatiku",
+        "pocetna": "Početna",
+        "zaposleni": "Zaposleni",
+        "obavestenja": "Obavestenja",
+        "osnovne-studije":"Osnovne studije",
+        "master studije":"Master studije",
+        "projekti": "Prjekti",
+        "nauka": "Nauka",
+        "kontakt": "Kontakt"
+    },
+    "registracija":{
+        "addz":"Dodaj zaposlenog",
+        "regz":"Registruj se kao zaposleni",
+        "username":"Korisničko ime",
+        "password":"Lozinka",
+        "name":"Ime",
+        "surname":"Prezime",
+        "address":"Adresa",
+        "number":"Mobilni",
+        "website":"Veb sajt",
+        "info": "Lični podaci",
+        "title":"Zvanje",
+        "classnum":"Broj kabineta",
+        "status":"Status",
+        "aktivan":"Aktivan",
+        "neaktivan":"Neaktivan",
+        "reg":"Registruj se",
+        "dodaj":"Dodaj",
+
+        "adds":"Dodaj studenta",
+        "regs":"Registruj se kao student",
+        "indeks":"Indeks",
+        "tip":"Tip studija",
+        "osnovne":"Osnovne akademske",
+        "master":"Master studije",
+        "doktor":"Doktorske studije"
+    },
+    "login":{
+        "username":"Korisničko ime",
+        "password":"Lozinka",
+        "login":"Prijavi se",
+        "register":"Napravi novi nalog",
+        "greska":"Pogrešni kredencijali. Pokušajte ponovo.",
+        "naslov":"Prijava"
+    },
+
+    "informacije":{
+        "okatedri":"O katedri",
+        "adresa":"Elektrotehnički fakultet, Univerzitet u Beogradu POB 35-34, 11120 Beograd, Srbija"
+    },
+
+    "zaposleni":{
+        "zaposleni":"Zaposleni"
+    },
+
+    "obavestenja":{
+        "obavestenja":"Obavestenja",
+        "studentskaTakmicenja":"Poziv za studentska takmičenja",
+        "konferencije":"Obavestenje o konferencijama",
+        "praksa":"Ponude za praksu",
+        "posao": "Ponude za posao"
+    },
+
+    "predmeti":{
+        
+        "padajuciIR":"Odsek za Računarsku Tehniku i Informatiku", 
+        "padajuciSI":"Odsek za Softversko Inženjerstvo",        
+        "padajuciOS":"Ostali odseci",               
+        "naslovIR":"Predmeti na smeru IR",
+        "naslovSI":"Predmeti na smeru SI",
+        "naslovOS":"Predmeti na ostalim smerovima",
+        "naslovmaster":"Predmeti na master studijama",
+        "prvi":"1. Semestar",
+        "drugi":"2. Semestar",
+        "treci":"3. Semestar",
+        "cetvrti":"4. Semestar",
+        "peti":"5. Semestar",
+        "sesti":"6. Semestar",
+        "sedmi":"7. Semestar",
+        "osmi":"8. Semestar"
+    },
+
+    "projekti":{
+        "naslov":"Projekti"
+    },
+
+    "istrazivanja":{
+        "istrazivanja":"Istraživanja",
+        "projekti":"Projekti"
+    },
+
+    "kontakt":{
+        "kontakt":"Kontakt"
+    }
+}

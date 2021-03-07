@@ -1,0 +1,29 @@
+<app-top>
+</app-top>
+
+<div class="left_side">
+    <div class="etf_logo" id="etf_l"></div>
+    <span style="margin-left: 150px; font-size:x-large; font-style: italic;" class='imena'>{{username}}</span>
+    <hr>
+    <ul class="side_bar">
+        <li><a (click)='odi("dashboard-zaposleni/pocetna")'>Почетна</a></li>
+        <hr>
+        <li><a (click)='preusmeri("profil")'>Профил</a></li>
+        <hr>
+        <li><a (click)='preusmeri("predmeti-zaposlen")'>Предмети</a></li>
+        <hr>
+        <li>
+            <a (click)='preusmeri("vesti")'>Вести</a>
+            <ul class="sub_list">
+                <li><a (click)='preusmeri("dodaj-vest")'>Додавање</a></li>
+                <li><a (click)='preusmeri("edit-vesti")'>Измена</a></li>
+            </ul>
+        </li>
+        <hr>
+        <li><a (click)='odjava()'>Одјава</a></li>
+        <hr>
+    </ul>
+    
+</div>
+
+<router-outlet></router-outlet>
